@@ -15,8 +15,10 @@ import { VerreTechniComponent } from "./verre-techni/verre-techni.component";
 import { VerreFeuilDecoComponent } from "./verre-feuil-deco/verre-feuil-deco.component";
 import { MiroitTradiComponent } from "./miroit-tradi/miroit-tradi.component";
 import { LocalisationComponent } from './localisation/localisation.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
+  { path: "home", component: HomeComponent },
   { path: "new-product", component: NewProductComponent },
   { path: "verre-techni", component: VerreTechniComponent },
   { path: "verre-feuil-deco", component: VerreFeuilDecoComponent },
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     VerreTechniComponent,
     VerreFeuilDecoComponent,
     MiroitTradiComponent,
-    LocalisationComponent
+    LocalisationComponent,
+    HomeComponent
   ],
   bootstrap: [AppComponent]
 })
