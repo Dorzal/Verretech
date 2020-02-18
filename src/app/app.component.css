@@ -1,5 +1,8 @@
 /* Footer */
-
+li a {
+    color: white;
+  }
+  
 header{
     margin-bottom: 45px;
 }
