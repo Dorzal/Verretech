@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-product.component.css']
 })
 export class NewProductComponent implements OnInit {
+  page = 1;
+  pageSize =10;
 
   constructor() { }
 

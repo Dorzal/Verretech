@@ -1,11 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-
-
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -15,20 +13,21 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 import { VerreTechniComponent } from "./verre-techni/verre-techni.component";
 import { VerreFeuilDecoComponent } from "./verre-feuil-deco/verre-feuil-deco.component";
 import { MiroitTradiComponent } from "./miroit-tradi/miroit-tradi.component";
-import { LocalisationComponent } from './localisation/localisation.component';
-import { HomeComponent } from './home/home.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { PanierComponent } from './panier/panier.component';
-import { InformationClientComponent } from './information-client/information-client.component';
-import { FacturationComponent } from './facturation/facturation.component';
-import { ConfirmationReservationComponent } from './confirmation-reservation/confirmation-reservation.component';
-import { FaqComponent } from './faq/faq.component';
-import { AproposComponent } from './apropos/apropos.component';
-import { MentionlegaleComponent } from './mentionlegale/mentionlegale.component';
-import { PointRelaisComponent } from './point-relais/point-relais.component';
-import { ContactComponent } from './contact/contact.component';
-import { ServiceComponent } from './service/service.component';
-
+import { LocalisationComponent } from "./localisation/localisation.component";
+import { HomeComponent } from "./home/home.component";
+import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { PanierComponent } from "./panier/panier.component";
+import { InformationClientComponent } from "./information-client/information-client.component";
+import { FacturationComponent } from "./facturation/facturation.component";
+import { ConfirmationReservationComponent } from "./confirmation-reservation/confirmation-reservation.component";
+import { FaqComponent } from "./faq/faq.component";
+import { AproposComponent } from "./apropos/apropos.component";
+import { MentionlegaleComponent } from "./mentionlegale/mentionlegale.component";
+import { PointRelaisComponent } from "./point-relais/point-relais.component";
+import { ContactComponent } from "./contact/contact.component";
+import { ServiceComponent } from "./service/service.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ClickcollectComponent } from "./clickcollect/clickcollect.component";
 
 const appRoutes: Routes = [
   { path: "home", component: HomeComponent },
@@ -47,6 +46,7 @@ const appRoutes: Routes = [
   { path: "mentionleg", component: MentionlegaleComponent },
   { path: "apropos", component: AproposComponent },
   { path: "confirm-reserv", component: ConfirmationReservationComponent },
+  { path: "cliandcoll", component: ClickcollectComponent },
   { path: "", redirectTo: "/new-product", pathMatch: "full" },
   { path: "**", component: PageNotFoundComponent }
 ];
@@ -59,6 +59,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FontAwesomeModule,
     FormsModule,
+    NgbModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
@@ -83,7 +84,8 @@ const appRoutes: Routes = [
     MentionlegaleComponent,
     PointRelaisComponent,
     ContactComponent,
-    ServiceComponent
+    ServiceComponent,
+    ClickcollectComponent
   ],
   bootstrap: [AppComponent]
 })
